@@ -1,0 +1,2 @@
+#!/bin/bash
+xclip -o | xargs $HOME/github/scripts/yt

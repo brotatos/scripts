@@ -1,0 +1,2 @@
+#!/bin/bash
+exec mplayer -fs -really-quiet $(youtube-viewer -7 "$@")
