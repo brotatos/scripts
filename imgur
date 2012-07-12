@@ -1,7 +1,7 @@
 #!/bin/bash
 imgur_url=$(xclip -o)
 unset i
-for image in $(curl "$imgur_url" | awk -F\" '/View full resolution/{ print $2 }' | xargs)
+for image in $(curl "$imgur_url" | awk -F\" '/View full resolution/{ print $2 }')
     do let i=i+1
-    curl $image > $i.jpg
+    curl "$image" > $i.jpg
 done
