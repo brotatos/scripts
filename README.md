@@ -10,6 +10,6 @@ yt takes the current clipboard and outputs it to clipyt which execs youtube-view
 
 imgur
 ==
-Downloads albums of [imgur.com](imgur.com)
+Downloads albums off [imgur](imgur.com).
 
 This script was taken from [here.](http://www.reddit.com/r/tinycode/comments/wggg4/bash_one_liner_to_download_an_entire_imgur_album/)
