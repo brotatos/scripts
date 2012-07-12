@@ -4,7 +4,7 @@ A simple script that creates a temporary file and proceeds to upload it, output 
 
 yt
 ==
-yt takes the current clipboard and execs youtube-viewer for it.
+yt takes the current clipboard and execs [youtube-viewer](https://github.com/trizen/youtube-viewer) for it.
 
 imgur
 ==
