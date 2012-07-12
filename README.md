@@ -7,3 +7,9 @@ yt and clipyt
 These two scripts work in conjunction to view videos off of youtube using mplayer and [youtube-viewer](https://github.com/trizen/youtube-viewer).
 
 yt takes the current clipboard and outputs it to clipyt which execs youtube-viewer for it.
+
+imgur
+==
+Downloads albums of [imgur.com](imgur.com)
+
+This script was taken from [here.](http://www.reddit.com/r/tinycode/comments/wggg4/bash_one_liner_to_download_an_entire_imgur_album/)
