@@ -1,5 +1,5 @@
 #!/bin/bash
 screenshot=$(mktemp tmpXXXXXXX.png)
 scrot -s "$screenshot"
-imgurbash "$screenshot"
+omup -s "$screenshot"
 rm "$screenshot"
