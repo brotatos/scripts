@@ -1,4 +1,5 @@
 #!/bin/bash
+
 imgur_url=$(xclip -o)
 unset i
 for image in $(curl "$imgur_url" | awk -F\" '/View full resolution/{ print $2 }')

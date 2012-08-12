@@ -1,3 +1,4 @@
 #!/bin/bash
+
 url=$(xclip -o)
 exec mplayer -fs -really-quiet $(youtube-viewer -7 "$url")
