@@ -1,5 +1,4 @@
 #!/bin/bash
 
 dir=$HOME/music
-files=find "$dir" \( -name '*.jpg' -o -name '*.png' -o -name '*.ini' \)
-rm $(echo "$files")
+find "$dir" \( -name '*.jpg' -o -name '*.png' -o -name '*.ini' -o -name '*.txt' \) -delete
