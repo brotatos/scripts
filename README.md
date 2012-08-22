@@ -2,10 +2,6 @@ screenshot
 ==
 A simple script that creates a temporary file and proceeds to upload it, output the URL, and then remove it.
 
-yt
-==
-yt takes the current clipboard and execs [youtube-viewer](https://github.com/trizen/youtube-viewer) for it.
-
 imgur
 ==
 Downloads albums off [imgur](imgur.com).
