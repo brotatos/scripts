@@ -11,3 +11,7 @@ This script was taken from [here.](http://www.reddit.com/r/tinycode/comments/wgg
 garbage
 ==
 Cleans up undesired files in ~/music.
+
+clap
+==
+A script to quicken converting tex to pdf.
