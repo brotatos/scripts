@@ -12,6 +12,3 @@ garbage
 ==
 Cleans up undesired files in ~/music.
 
-clap
-==
-A script to quicken converting tex to pdf.
