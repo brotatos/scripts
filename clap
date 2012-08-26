@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for i in *.tex; do
-	latex "$i";
-	dvipdfm "${i%tex}dvi"
-	zathura *.pdf
-	rm *.{dvi,pdf,aux}
-done
