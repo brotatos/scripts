@@ -2,7 +2,7 @@
 
 for i in *.tex; do
 	latex "$i";
-	dvipdfm *.dvi;
-	zathura *.pdf;
+	dvipdfm "${i%tex}dvi"
+	zathura *.pdf
 	rm *.{dvi,pdf,aux}
-done;
+done
