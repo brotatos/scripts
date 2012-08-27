@@ -1,0 +1,4 @@
+#!/bin/bash
+
+url=$(xclip -o)
+exec youtube-viewer -4 "$url"
