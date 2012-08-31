@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 for i in *.tex; do
     [[ -f "$i" ]] || continue
