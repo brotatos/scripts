@@ -1,9 +1,10 @@
 #!/bin/sh
 
 for i in *.tex; do
+    [[ -f "$i" ]] || continue
     latex "$i";
-    dvipdfm "${i%tex}dvi;
+    dvipdfm "${i%tex}dvi";
     zathura *.pdf;
-done
+done;
 
 rm *.{dvi,pdf,aux}
