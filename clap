@@ -1,10 +1,12 @@
 #!/bin/bash
 
+compile() {
 for i in *.tex; do
     [[ -f "$i" ]] || continue
     latex "$i";
     dvipdfm "${i%tex}dvi";
     zathura *.pdf;
 done;
+}
 
 rm *.{dvi,pdf,aux}
