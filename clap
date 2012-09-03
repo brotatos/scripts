@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/bin/bash -x
 
-compile() {
+tmpdir=$(mktemp -d)
+
 for i in *.tex; do
-    [[ -f "$i" ]] || continue
-    latex "$i";
-    dvipdfm "${i%tex}dvi";
-    zathura *.pdf;
+  [[ -f "$i" ]] || continue 
+  latex "$i";
+  dvipdfm "${i%.tex}.dvi"
+  zathura "${i%.tex}*.pdf;
+  rm -f "$i%.tex}."{dvi,pdf,aux}";
 done;
-}
 
-rm *.{dvi,pdf,aux}
