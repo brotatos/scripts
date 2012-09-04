@@ -1,3 +1,8 @@
+====
+To-do
+====
+1. Write a python script to track lifts and progression
+
 ==========
 screenshot
 ==========
