@@ -1,8 +1,8 @@
-====
+=====
 To-do
-====
+=====
 
-* Write a python script to track lifts and progression
+* avoid `bash pitfalls <http://mywiki.wooledge.org/BashPitfalls>`_.
 
 ==========
 screenshot
