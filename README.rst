@@ -28,6 +28,6 @@ Cleans up undesired files in ~/music.
 clap
 ====
 
-_Currently skipping the first if code block. Trying to figure out why._
+**Currently skipping the first if code block. Trying to figure out why.**
 
 A quick way to compile latex files and view them in your zathura.
