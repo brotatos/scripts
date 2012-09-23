@@ -1,12 +1,13 @@
-#!/bin/bash
+#!/bin/bash -x
 
 tmpdir=$(mktemp -d)
 
 for i in *.tex; do
     if [[ -f *.bib ]]; then
+        cp -t "$tmpdir" *.bib;
         latex -output-directory="$tmpdir" "$i";
         cd "$tmpdir";
-        bibtex "$i";
+        bibtex "${i%.tex}.aux";
         latex "$i";
         latex "$i";
         dvipdfm "${i%.tex}.pdf";
