@@ -28,4 +28,4 @@ Cleans up undesired files in ~/music.
 clap
 ====
 
-A quick way to compile latex files and view them in your favorite pdf viewer.
+A quick way to compile latex files and view them in your zathura.
