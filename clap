@@ -5,8 +5,8 @@ tmpdir=$(mktemp -d)
 for i in *.tex; do
     if [[ -f *.bib ]]; then
         cp -t "$tmpdir" *.bib;
-        latex -output-directory="$tmpdir" "$i";
         cd "$tmpdir";
+        latex -output-directory="$tmpdir" "$i";
         bibtex "${i%.tex}.aux";
         latex "$i";
         latex "$i";
