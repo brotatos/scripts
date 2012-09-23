@@ -3,15 +3,15 @@
 tmpdir=$(mktemp -d)
 
 for i in *.tex; do
-    if [[ -f *.bib ]]; then
-        cp -t "$tmpdir" *.bib;
+    if [ -f *.bib ]; then
+        cp -t "$tmpdir" *;
         cd "$tmpdir";
-        latex -output-directory="$tmpdir" "$i";
+        latex "$i";
         bibtex "${i%.tex}.aux";
         latex "$i";
         latex "$i";
-        dvipdfm "${i%.tex}.pdf";
-        zathura "${i%tex.}.pdf";
+        dvipdfm "${i%.tex}.dvi";
+        zathura "${i%.tex}.pdf";
     else
         [[ -f "$i" ]] || continue
         latex -output-directory="$tmpdir" "$i";
