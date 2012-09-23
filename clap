@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 tmpdir=$(mktemp -d)
 
@@ -18,6 +18,6 @@ for i in *.tex; do
         dvipdfm -o "$tmpdir/${i%.tex}.pdf" "$tmpdir/${i%.tex}.dvi";
         zathura "$tmpdir/${i%.tex}.pdf";
     fi
-done;
+done
 
-rm -rf "$tmpdir";
+rm -rf "$tmpdir"
