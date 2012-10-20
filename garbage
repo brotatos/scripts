@@ -1,4 +1,4 @@
 #!/bin/bash
 
 dir=/mnt/media/media/music
-find "$dir" \( -name '*.jpg' -o -name '*.png' -o -name '*.ini' -o -name '*.txt' \) -delete
+find "$dir" \( -name '*.jpg' -o -name '*.png' -o -name '*.ini' -o -name '*.txt' -o -name '*.db' \) -delete
