@@ -1,4 +1,4 @@
 #!/bin/bash
 
 url=$(xclip -o | grep youtube)
-exec mplayer -fs -really-quiet $(youtube-viewer -4 "$url")
+exec mplayer -fs -really-quiet $(youtube-viewer -4 "$url") || exit 1

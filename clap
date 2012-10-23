@@ -5,7 +5,7 @@ tmpdir=$(mktemp -d)
 for i in *.tex; do
     if [ -f *.bib ]; then #bibtex loop
         cp -t "$tmpdir" *;
-        cd "$tmpdir";
+        cd "$tmpdir" || exit 1;
         latex "$i";
         bibtex "${i%.tex}.aux";
         latex "$i";
