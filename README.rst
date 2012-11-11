@@ -29,3 +29,4 @@ clap
 ====
 
 A quick way to compile latex files and view them in `zathura. <https://pwmt.org/projects/zathura/>`_
+
