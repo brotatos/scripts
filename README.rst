@@ -19,7 +19,7 @@ garbage
 Cleans up undesired files in ~/music.
 
 ====
-clap
+clap (compile latex and preview)
 ====
 
 A quick way to compile latex files and view them in `zathura. <https://pwmt.org/projects/zathura/>`_
