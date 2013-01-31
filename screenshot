@@ -2,5 +2,5 @@
 
 screenshot=$(mktemp tmpXXXXXXX.png)
 scrot -s "$screenshot"
-omup -s "$screenshot" | xclip
+imgurbash "$screenshot" | xclip
 rm "$screenshot"
