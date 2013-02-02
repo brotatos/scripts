@@ -1,9 +1,3 @@
-=====
-To-do
-=====
-
-* avoid `bash pitfalls <http://mywiki.wooledge.org/BashPitfalls>`_.
-
 ==========
 screenshot
 ==========
