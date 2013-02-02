@@ -1,6 +1,6 @@
 #!/bin/bash
 
-screenshot=$(mktemp tmpXXXXXXX.png)
+screenshot=$(mktemp /tmp/tmpXXXXXXX.png)
 scrot -s "$screenshot"
-omup -s "$screenshot" | xclip
+omup "$screenshot" | xclip
 rm "$screenshot"
