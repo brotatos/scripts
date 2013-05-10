@@ -1,0 +1,10 @@
+#!/bin/bash
+for i in *; do
+    if [ -d "$i" ]; then
+        cd "$i";
+        echo $PWD
+        git status -s
+        cd ..
+    fi
+done
+
