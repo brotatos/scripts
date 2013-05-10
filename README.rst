@@ -23,3 +23,10 @@ clap (compile latex and preview)
 ====
 
 A quick way to compile latex files and view them in `zathura. <https://pwmt.org/projects/zathura/>`_
+
+======
+script
+======
+
+A quick method of checking a the status of multiple git repos in one
+folder.
