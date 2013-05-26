@@ -1,4 +1,8 @@
 #!/bin/bash
 
 dir=/mnt/media/media/music
+echo "Before:"
+du -sh "$dir"
 find "$dir" \( -name '*.jpg' -o -name '*.png' -o -name '*.ini' -o -name '*.txt' -o -name '*.db' \) -delete
+echo "After:"
+du -sh "$dir"
