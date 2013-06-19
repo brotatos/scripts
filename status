@@ -1,9 +1,9 @@
 #!/bin/bash
 for i in *; do
     if [ -d "$i" ] && [ -d "$i"/.git ]; then
-        cd "$i";
-        echo $PWD
+        cd "$i"
+        echo "$PWD"
         git status -s
+        cd ..
     fi
-    cd ..
 done
