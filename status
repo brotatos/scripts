@@ -1,11 +1,9 @@
 #!/bin/bash
 for i in *; do
-    if [ -d "$i" ]; then
-        cd "$i";
-    fi
-    if [ -d .git ]; then
-        echo $PWD
+    if [ -d "$i" ] && [ -d "$i"/.git ]; then
+        cd "$i"
+        echo "$PWD"
         git status -s
+        cd ..
     fi
-    cd ..
 done
