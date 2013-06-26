@@ -3,7 +3,7 @@
 tmpdir=$(mktemp -d)
 
 for i in $@; do
-    if [ -f *.bib ]; then #bibtex loop
+    if [ -f *.bib ]; then # bibtex loop
         cp -t "$tmpdir" *;
         cd "$tmpdir" || exit 1;
         latex "$i";
