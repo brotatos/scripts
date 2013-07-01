@@ -1,6 +1,6 @@
 #!/bin/bash
 for i in *; do
-    if [ -d "$i" ] && [ -d "$i"/.git ]; then
+    if [[ -d "$i" && -d "$i"/.git ]]; then
         cd "$i"
         echo "$PWD"
         git status -s
