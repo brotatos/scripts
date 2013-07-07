@@ -1,9 +1,10 @@
 #!/bin/bash
+shopt -s globstar
 
-dir=/mnt/media/music
+dir="$HOME/music"
 echo "Before:"
 du -sh "$dir"
-find "$dir" \( -name '*.jpg' -o -name '*.png' -o -name '*.ini' -o -name '*.txt' -o -name '*.db' -o -name '*.m3u' -o -name '*.nfo' -o -name '*.sfv' \) -delete
-rmdir "$dir"/*
+find "$dir" \( -name '*.jpg' -o -name '*.png' -o -name '*.ini' -o -name '*.txt' -o -name '*.db' -o -name '*.m3u' -o -name '*.nfo' -o -name '*.sfv' -o -name '*.jpeg' \) -delete
+rmdir --ignore-fail-on-non-empty -p "$dir"/**
 echo "After:"
 du -sh "$dir"
