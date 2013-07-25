@@ -1,9 +1,12 @@
 #!/bin/bash
 
 dir="$HOME/music"
-echo "Before:"
-du -sh "$dir"
+before=$(du -sh "$dir")
+
 find "$dir" \( -name '*.jpg' -o -name '*.png' -o -name '*.ini' -o -name '*.txt' -o -name '*.db' -o -name '*.m3u' -o -name '*.nfo' -o -name '*.sfv' -o -name '*.jpeg' \) -delete
 find "$dir" -empty -delete
+
+echo "Before:"
+echo "$before"
 echo "After:"
 du -sh "$dir"
