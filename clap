@@ -2,9 +2,8 @@
 
 compile() {
    local tmpdir=$(mktemp -d)
-   echo "$1"
    for i in "$1"; do
-       if [ -f *.bib ]; then # bibtex loop
+       if [[ -f *.bib ]]; then # bibtex loop
            cp -t "$tmpdir" *
            cd "$tmpdir" || exit 1
            latex "$i"
@@ -23,7 +22,7 @@ compile() {
    trap 'rm -rf "$tmpdir"' EXIT
 }
 
-if [ -n "$1" ]; then
+if [[ -n "$1" ]]; then
   compile $1
 else
    compile *.tex
