@@ -1,23 +1,30 @@
 #!/bin/bash
 
-tmpdir=$(mktemp -d)
+compile() {
+   local tmpdir=$(mktemp -d)
+   echo "$1"
+   for i in "$1"; do
+       if [ -f *.bib ]; then # bibtex loop
+           cp -t "$tmpdir" *
+           cd "$tmpdir" || exit 1
+           latex "$i"
+           bibtex "${i%.tex}.aux"
+           latex "$i"
+           latex "$i"
+           dvipdfm "${i%.tex}.dvi"
+           zathura "${i%.tex}.pdf"
+       else
+           [[ -f "$i" ]] || continue
+           latex -output-directory="$tmpdir" "$i"
+           dvipdfm -o "$tmpdir/${i%.tex}.pdf" "$tmpdir/${i%.tex}.dvi"
+           evince "$tmpdir/${i%.tex}.pdf"
+       fi
+   done
+   trap 'rm -rf "$tmpdir"' EXIT
+}
 
-for i in $@; do
-    if [ -f *.bib ]; then # bibtex loop
-        cp -t "$tmpdir" *
-        cd "$tmpdir" || exit 1
-        latex "$i"
-        bibtex "${i%.tex}.aux"
-        latex "$i"
-        latex "$i"
-        dvipdfm "${i%.tex}.dvi"
-        zathura "${i%.tex}.pdf"
-    else
-        [[ -f "$i" ]] || continue
-        latex -output-directory="$tmpdir" "$i"
-        dvipdfm -o "$tmpdir/${i%.tex}.pdf" "$tmpdir/${i%.tex}.dvi"
-        evince "$tmpdir/${i%.tex}.pdf"
-    fi
-done
-
-rm -rf "$tmpdir"
+if [ -n "$1" ]; then
+  compile $1
+else
+   compile *.tex
+fi
