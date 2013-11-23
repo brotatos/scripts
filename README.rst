@@ -22,3 +22,8 @@ status
 ------
 A quick method of checking a the status of multiple git repos in one
 folder.
+
+wake
+----
+Causes the mouse to click every once and a while to prevent my monitor from
+sleeping.
