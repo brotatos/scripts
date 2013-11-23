@@ -1,9 +1,6 @@
 #!/bin/bash
 while [ true ]; do
-   xdotool click
-   sleep 1s
-   xdotool click 1
-   sleep 1s
-   xdotool click 1
+   xdotool mousemove 100 100
    sleep 300s
+   xdotool mousemove 50 50
 done
