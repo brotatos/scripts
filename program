@@ -1,4 +1,4 @@
 #!/bin/bash
 djtgcfg enum
-#djtgcfg prog -d Nexys2 -i 0 -f "$1" --verbose
-djtgcfg prog -d DOnbUsb -i 0 -f "$1" --verbose
+djtgcfg prog -d Nexys2 -i 0 -f "$1" --verbose
+#djtgcfg prog -d DOnbUsb -i 0 -f "$1" --verbose
