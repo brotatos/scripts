@@ -1,6 +1,6 @@
 #!/bin/bash
 while [ true ]; do
    xdotool mousemove 100 100
-   sleep 600s
+   sleep 599s
    xdotool mousemove 50 50
 done
